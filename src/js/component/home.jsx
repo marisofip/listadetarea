@@ -48,7 +48,7 @@ const Home = () => {
 	    <input type="text" className="form-control" placeholder="Escribir Tarea" aria-label="Username" value={tarea}
                     onChange={(e) => setTarea(e.target.value)}
                     onKeyDown={cargarTarea}/>
-     	<ul class="list-group list-group-flush">
+     	<ul className="list-group list-group-flush">
 		 {listaTareas.map((item, id) => 
                     <li className = "list-group-item hidden" key={id}>{item} 
                     <button type="button" className="btn btn-outline-primary float-end" 
@@ -56,6 +56,7 @@ const Home = () => {
                     </button>
 					</li> ) }
 			  </ul>
+              <p>Pendientes: {listaTareas.length}</p>
 			{listaVacia}
 			</div>
 			</div>
